@@ -1,17 +1,59 @@
-html,
-body,
-#root {
+/* Puray browser page ko full height aur dark theme dena */
+html, body, #root {
   margin: 0;
+  padding: 0;
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow: hidden;
 }
 
-.app {
+/* Main App Container layout setup */
+.app-container {
+  display: flex;
+  flex-direction: column;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh;
 }
 
+/* Top Header styling */
+.app-header {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background-color: #1e1e1e;
+  border-bottom: 1px solid #2d2d2d;
+  height: 60px;
+  box-sizing: border-box;
+}
+
+.logo-emoji {
+  font-size: 24px;
+  margin-right: 12px;
+}
+
+.app-header h1 {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Chat Container ko bachi hui puri screen space dena */
 .chat-container {
-  height: 600px; /* Ya jo height aap rakhna chahein */
+  flex: 1;
   width: 100%;
+  height: calc(100vh - 60px); 
+  background-color: #121212;
+  position: relative;
+}
+
+/* ChatKit component ko full height aur width par force karna */
+.chat-container > div, 
+.chat-container iframe {
+  width: 100% !important;
+  height: 100% !important;
+  min-height: 100% !important;
+  border: none !important;
 }
