@@ -2,7 +2,7 @@ import { useChatKit } from "@openai/chatkit-react";
 
 // Agar aap Vite use kar rahe hain to 'import.meta.env.VITE_API_URL' use hoga.
 // Agar simple Create React App hai to 'process.env.REACT_APP_API_URL' use hoga.
-const BACKEND_URL = import.meta.env.VITE_API_URL || "http://127.0.0.1:8000";
+const BACKEND_URL = import.meta.env.VITE_API_URL || "https://islamic-knowledge-assistant-1.onrender.com";
 
 export function useIslamicChatKit() {
   return useChatKit({
